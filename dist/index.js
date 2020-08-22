@@ -25642,13 +25642,13 @@ const toMarkdown = (ast) => {
 };
 
 const README = 'README.md' || false;
-const mainDir = join(__dirname, '.');
-// readdirSync(mainDir).forEach((dir) => {
-//   if (dir !== 'readme-trans') {
-//     mkdirSync(join(mainDir, 'readme-trans'));
-//   }
-// });
-const readme = readFileSync(__webpack_require__.ab + "README.md", { encoding: 'utf8' });
+const mainDir = '.';
+readdirSync(mainDir).forEach((dir) => {
+  if (dir !== 'readme-trans') {
+    mkdirSync(join(mainDir, 'readme-trans'));
+  }
+});
+const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
 const readmeAST = toAst(readme);
 
 const languages = [

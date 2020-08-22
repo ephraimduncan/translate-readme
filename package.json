@@ -12,7 +12,7 @@
     "translate",
     "translator"
   ],
-  "author": "",
+  "author": "Ephraim Atta-Duncan",
   "license": "ISC",
   "dependencies": {
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
