@@ -19,11 +19,11 @@ const toMarkdown = (ast) => {
 
 const README = 'README.md' || 'readme.md';
 const mainDir = join(__dirname, '.');
-readdirSync(mainDir).forEach((file) => {
-  if (file !== 'readme-trans') {
-    mkdirSync(join(mainDir, 'readme-trans'));
-  }
-});
+// readdirSync(mainDir).forEach((dir) => {
+//   if (dir !== 'readme-trans') {
+//     mkdirSync(join(mainDir, 'readme-trans'));
+//   }
+// });
 const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
 const readmeAST = toAst(readme);
 
@@ -58,7 +58,7 @@ languages.forEach((lang) => {
   async function writeToFile() {
     await Promise.all(translatedText);
     writeFileSync(
-      join('readme-trans', `readme-${lang}`),
+      join(mainDir, `readme-${lang}`),
       toMarkdown(readmeAST),
       'utf8'
     );
