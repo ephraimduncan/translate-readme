@@ -18,7 +18,7 @@ const toMarkdown = (ast) => {
 };
 
 const mainDir = '.';
-const README = 'readme.md'
+let README = 'readme.md'
   ? readdirSync(mainDir).includes('readme.md')
   : 'README.md';
 const lang = core.getInput('LANG');
