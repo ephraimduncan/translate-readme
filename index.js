@@ -19,11 +19,11 @@ const toMarkdown = (ast) => {
 
 const README = 'README.md' || 'readme.md';
 const mainDir = '.';
-readdirSync(mainDir).forEach((dir) => {
-  if (dir !== 'readme-trans') {
-    mkdirSync(join(mainDir, 'readme-trans'));
-  }
-});
+// readdirSync(mainDir).forEach((dir) => {
+//   if (dir !== 'readme-trans') {
+//     mkdirSync(join(mainDir, 'readme-trans'));
+//   }
+// });
 const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
 const readmeAST = toAst(readme);
 
