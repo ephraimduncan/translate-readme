@@ -18,8 +18,8 @@ const toMarkdown = (ast) => {
 };
 
 const mainDir = '.';
-let README = 'readme.md'
-  ? readdirSync(mainDir).includes('readme.md')
+let README = readdirSync(mainDir).includes('readme.md')
+  ? 'readme.md'
   : 'README.md';
 const lang = core.getInput('LANG');
 const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
