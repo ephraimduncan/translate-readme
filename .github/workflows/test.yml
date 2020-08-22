@@ -1,0 +1,23 @@
+name: Translate Readme
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: '12.x'
+      - name: Translate Readme
+        uses: ./

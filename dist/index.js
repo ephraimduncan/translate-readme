@@ -19616,7 +19616,7 @@ is.array = (value, assertion) => {
     if (!Array.isArray(value)) {
         return false;
     }
-    if (!assertion) {
+    if (!is.function_(assertion)) {
         return true;
     }
     return value.every(assertion);
@@ -25622,7 +25622,7 @@ exports.parseCheckIgnore = (text) => {
 /* 932 */
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
-const { readFileSync, writeFileSync } = __webpack_require__(747);
+const { readFileSync, writeFileSync, mkdirSync, readdirSync } = __webpack_require__(747);
 const { join, resolve } = __webpack_require__(622);
 const $ = __webpack_require__(332);
 const unified = __webpack_require__(75);
@@ -25631,7 +25631,6 @@ const stringify = __webpack_require__(114);
 const visit = __webpack_require__(55);
 const { default: Axios } = __webpack_require__(545);
 const simpleGit = __webpack_require__(477);
-const { rejects } = __webpack_require__(357);
 const git = simpleGit();
 
 const toAst = (markdown) => {
@@ -25643,58 +25642,86 @@ const toMarkdown = (ast) => {
 };
 
 const README = 'README.md' || false;
-const mainDir = '.';
-const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
-const readmeAST = toAst(readme);
-let originalText = [];
-
-visit(readmeAST, async (node) => {
-  if (node.type === 'text') {
-    originalText.push(node.value);
-    node.value = (await $(node.value, { to: 'zh-CN' })).text;
+const mainDir = join(__dirname, '.');
+readdirSync(mainDir).forEach((file) => {
+  if (file !== 'readme-trans') {
+    mkdirSync(join(mainDir, 'readme-trans'));
   }
 });
+const readme = readFileSync(__webpack_require__.ab + "README.md", { encoding: 'utf8' });
+const readmeAST = toAst(readme);
 
-const newText = originalText.map(async (text) => {
-  return (await $(text, { to: 'zh-CN' })).text;
+const languages = [
+  'la',
+  'zh-CN',
+  'nl',
+  'fr',
+  'de',
+  'hi',
+  'it',
+  'ko',
+  'la',
+  'pt',
+  'ru',
+  'es',
+];
+languages.forEach((lang) => {
+  let originalText = [];
+
+  visit(readmeAST, async (node) => {
+    if (node.type === 'text') {
+      originalText.push(node.value);
+      node.value = (await $(node.value, { to: lang })).text;
+    }
+  });
+
+  const translatedText = originalText.map(async (text) => {
+    return (await $(text, { to: lang })).text;
+  });
+
+  async function writeToFile() {
+    await Promise.all(translatedText);
+    writeFileSync(
+      join('readme-trans', `readme-${lang}`),
+      toMarkdown(readmeAST),
+      'utf8'
+    );
+  }
+
+  writeToFile();
 });
 
-async function p() {
-  await Promise.all(newText);
-  writeFileSync(join(mainDir, README), toMarkdown(readmeAST), 'utf8');
+async function commitChanges() {
+  const mail = await Axios.get(
+    `https://api.github.com/users/${process.env.GITHUB_ACTOR}/events`
+  );
+  let email;
+  let author;
+  await mail.data.forEach((data) => {
+    if (data.type === 'PushEvent') {
+      email = data.payload.commits[0].author.email;
+    } else {
+      author = 'github-actions[bot]';
+      email = '41898282+github-actions[bot]@users.noreply.github.com';
+    }
+  });
+
+  let actor = author ? author : process.env.GITHUB_ACTOR;
+
+  await git.add('./*');
+  await git.addConfig('user.name', actor);
+  await git.addConfig('user.email', email);
+  await git.commit(
+    'docs: Added Readme translations via https://github.com/dephraiim/translate-readme'
+  );
+  await git.push();
 }
 
-p();
-
-// async function commit() {
-//   const mail = await Axios.get(`https://api.github.com/users/${process.env.GITHUB_ACTOR}/events`);
-//   let email;
-//   let author;
-//   await mail.data.forEach((data) => {
-//     if (data.type === 'PushEvent') {
-//       email = data.payload.commits[0].author.email;
-//     } else {
-//       author = 'github-actions[bot]';
-//       email = '41898282+github-actions[bot]@users.noreply.github.com';
-//     }
-//   });
-
-//   let actor = author ? author : process.env.GITHUB_ACTOR;
-
-//   await git.add('./*');
-//   await git.addConfig('user.name', actor);
-//   await git.addConfig('user.email', email);
-//   await git.commit(
-//     'docs: Added Readme translations via https://github.com/dephraiim/translate-readme'
-//   );
-//   await git.push();
-// }
-
-// try {
-//   commit();
-// } catch (error) {
-//   throw new Error(error);
-// }
+try {
+  commitChanges();
+} catch (error) {
+  throw new Error(error);
+}
 
 
 /***/ }),

@@ -7,5 +7,5 @@ runs:
   main: dist/index.js
 
 branding:
-  icon: shield
+  icon: book-open
   color: black
