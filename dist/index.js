@@ -23570,7 +23570,7 @@ const mainDir = '.';
 let README = readdirSync(mainDir).includes('readme.md')
   ? 'readme.md'
   : 'README.md';
-const lang = core.getInput('LANG');
+const lang = 'la';
 const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
 const readmeAST = toAst(readme);
 console.log('AST CREATED AND READ');
@@ -23607,7 +23607,7 @@ async function commitChanges(lang) {
     '41898282+github-actions[bot]@users.noreply.github.com'
   );
   await git.commit(
-    `docs: Added ${lang} readme translation via https://github.com/dephraiim/translate-readme`
+    `docs: Added "${lang}" readme translation via https://github.com/dephraiim/translate-readme`
   );
   console.log('finished commit');
   await git.push();

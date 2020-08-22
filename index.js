@@ -58,7 +58,7 @@ async function commitChanges(lang) {
     '41898282+github-actions[bot]@users.noreply.github.com'
   );
   await git.commit(
-    `docs: Added ${lang} readme translation via https://github.com/dephraiim/translate-readme`
+    `docs: Added "${lang}" readme translation via https://github.com/dephraiim/translate-readme`
   );
   console.log('finished commit');
   await git.push();

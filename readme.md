@@ -32,6 +32,8 @@ _A submission for the [DEV: GitHub Actions For Open Source!](https://dev.to/devt
            uses: dephraiim/translate-readme@v1
            with:
              LANG: la
+             # ISO Langusge Code.
+             # Supported Languages below
    ```
 
 ## Configuration
