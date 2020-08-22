@@ -1,0 +1,21 @@
+{
+  "name": "translate-md",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@k3rn31p4nic/google-translate-api": "^1.1.1",
+    "axios": "^0.20.0",
+    "remark-parse": "^8.0.3",
+    "remark-stringify": "^8.1.1",
+    "simple-git": "^2.19.0",
+    "unified": "^9.1.0",
+    "unist-util-visit": "^2.0.3"
+  }
+}
