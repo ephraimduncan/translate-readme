@@ -19,7 +19,7 @@ const toMarkdown = (ast) => {
 
 const README = 'readme.md';
 const mainDir = '.';
-const lang = core.getInput('LANG') || 'zh-CN';
+const lang = core.getInput('LANG');
 const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
 const readmeAST = toAst(readme);
 console.log('AST CREATED AND READ');

@@ -22,4 +22,4 @@ jobs:
       - name: Translate Readme
         uses: dephraiim/translate-readme@main
         with:
-          LANG: 'la'
+          LANG: la
