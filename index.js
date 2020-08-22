@@ -70,25 +70,28 @@ langs.forEach((lang) => {
 
 async function commitChanges() {
   console.log('commit started');
-  const mail = await Axios.get(
-    `https://api.github.com/users/${process.env.GITHUB_ACTOR}/events`
-  );
-  let email;
-  let author;
-  await mail.data.forEach((data) => {
-    if (data.type === 'PushEvent') {
-      email = data.payload.commits[0].author.email;
-    } else {
-      author = 'github-actions[bot]';
-      email = '41898282+github-actions[bot]@users.noreply.github.com';
-    }
-  });
+  // const mail = await Axios.get(
+  //   `https://api.github.com/users/${process.env.GITHUB_ACTOR}/events`
+  // );
+  // let email;
+  // let author;
+  // await mail.data.forEach((data) => {
+  //   if (data.type === 'PushEvent') {
+  //     email = data.payload.commits[0].author.email;
+  //   } else {
+  //     author = '';
+  //     email = ;
+  //   }
+  // });
 
-  let actor = author ? author : process.env.GITHUB_ACTOR;
+  // let actor = author ? author : process.env.GITHUB_ACTOR;
 
   await git.add('./*');
-  await git.addConfig('user.name', actor);
-  await git.addConfig('user.email', email);
+  await git.addConfig('user.name', 'github-actions[bot]');
+  await git.addConfig(
+    'user.email',
+    '41898282+github-actions[bot]@users.noreply.github.com'
+  );
   await git.commit(
     'docs: Added Readme translations via https://github.com/dephraiim/translate-readme'
   );
