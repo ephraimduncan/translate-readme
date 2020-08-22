@@ -20,4 +20,4 @@ jobs:
         with:
           node-version: '12.x'
       - name: Translate Readme
-        uses: ./
+        uses: ./dist/index.js

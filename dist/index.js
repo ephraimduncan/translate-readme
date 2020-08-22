@@ -25650,8 +25650,8 @@ const mainDir = '.';
 // });
 const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
 const readmeAST = toAst(readme);
-
-const languages = [
+console.log('AST CREATED AND READ');
+const langs = [
   'la',
   'zh-CN',
   'nl',
@@ -25665,7 +25665,7 @@ const languages = [
   'ru',
   'es',
 ];
-languages.forEach((lang) => {
+langs.forEach((lang) => {
   let originalText = [];
 
   visit(readmeAST, async (node) => {
@@ -25689,9 +25689,11 @@ languages.forEach((lang) => {
   }
 
   writeToFile();
+  console.log(`${lang} written`);
 });
 
 async function commitChanges() {
+  console.log('commit started');
   const mail = await Axios.get(
     `https://api.github.com/users/${process.env.GITHUB_ACTOR}/events`
   );
@@ -25714,11 +25716,14 @@ async function commitChanges() {
   await git.commit(
     'docs: Added Readme translations via https://github.com/dephraiim/translate-readme'
   );
+  console.log('finished commit');
   await git.push();
+  console.log('pushed');
 }
 
 try {
   commitChanges();
+  console.log('Done');
 } catch (error) {
   throw new Error(error);
 }
