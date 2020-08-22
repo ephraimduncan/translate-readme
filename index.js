@@ -17,7 +17,7 @@ const toMarkdown = (ast) => {
   return unified().use(stringify).stringify(ast);
 };
 
-const README = 'README.md' || 'readme.md';
+const README = 'readme.md';
 const mainDir = '.';
 // readdirSync(mainDir).forEach((dir) => {
 //   if (dir !== 'readme-trans') {
