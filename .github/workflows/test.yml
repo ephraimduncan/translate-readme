@@ -21,5 +21,3 @@ jobs:
           node-version: '12.x'
       - name: Translate Readme
         uses: dephraiim/translate-readme@main
-        with:
-          LANG: la
