@@ -1,4 +1,4 @@
-const { readFileSync, writeFileSync } = require('fs');
+const { readFileSync, writeFileSync, readdirSync } = require('fs');
 const { join } = require('path');
 const core = require('@actions/core');
 const $ = require('@k3rn31p4nic/google-translate-api');
@@ -17,8 +17,10 @@ const toMarkdown = (ast) => {
   return unified().use(stringify).stringify(ast);
 };
 
-const README = 'readme.md';
 const mainDir = '.';
+const README = 'readme.md'
+  ? readdirSync(mainDir).includes('readme.md')
+  : 'README.md';
 const lang = core.getInput('LANG');
 const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
 const readmeAST = toAst(readme);
