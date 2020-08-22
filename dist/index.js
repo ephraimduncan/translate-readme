@@ -23547,7 +23547,7 @@ exports.parseCheckIgnore = (text) => {
 /* 932 */
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
-const { readFileSync, writeFileSync } = __webpack_require__(747);
+const { readFileSync, writeFileSync, readdirSync } = __webpack_require__(747);
 const { join } = __webpack_require__(622);
 const core = __webpack_require__(186);
 const $ = __webpack_require__(332);
@@ -23566,8 +23566,10 @@ const toMarkdown = (ast) => {
   return unified().use(stringify).stringify(ast);
 };
 
-const README = 'readme.md';
 const mainDir = '.';
+let README = 'readme.md'
+  ? readdirSync(mainDir).includes('readme.md')
+  : undefined;
 const lang = core.getInput('LANG');
 const readme = readFileSync(join(mainDir, README), { encoding: 'utf8' });
 const readmeAST = toAst(readme);
