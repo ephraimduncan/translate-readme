@@ -1,0 +1,11 @@
+name: Translate Readme Action
+author: Ephraim Atta-Duncan
+description: Translate the Readme to another language
+
+runs:
+  using: node12
+  main: dist/index.js
+
+branding:
+  icon: shield
+  color: black
