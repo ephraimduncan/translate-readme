@@ -1,13 +1,17 @@
 {
   "name": "translate-md",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Github Action to translate Readme to a different language",
   "main": "index.js",
   "scripts": {
     "build": "ncc build ./index.js -o dist --source-map",
     "build:commit": "npm run build && git add . && git commit"
   },
-  "keywords": [],
+  "keywords": [
+    "readme",
+    "translate",
+    "translator"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
