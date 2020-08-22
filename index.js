@@ -58,7 +58,7 @@ langs.forEach((lang) => {
   async function writeToFile() {
     await Promise.all(translatedText);
     writeFileSync(
-      join(mainDir, `readme-${lang}`),
+      join(mainDir, `readme-${lang}.md`),
       toMarkdown(readmeAST),
       'utf8'
     );
