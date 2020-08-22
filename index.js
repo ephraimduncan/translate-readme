@@ -64,11 +64,20 @@ langs.forEach((lang) => {
     );
     console.log(`${lang} readme written`);
   }
+  async function translateReadme() {
+    try {
+      await writeToFile();
+      await commitChanges(lang);
+      console.log('Done');
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
 
-  writeToFile();
+  translateReadme();
 });
 
-async function commitChanges() {
+async function commitChanges(lang) {
   console.log('commit started');
   // const mail = await Axios.get(
   //   `https://api.github.com/users/${process.env.GITHUB_ACTOR}/events`
@@ -93,16 +102,9 @@ async function commitChanges() {
     '41898282+github-actions[bot]@users.noreply.github.com'
   );
   await git.commit(
-    'docs: Added Readme translations via https://github.com/dephraiim/translate-readme'
+    `docs: Added ${lang} readme translations via https://github.com/dephraiim/translate-readme`
   );
   console.log('finished commit');
   await git.push();
   console.log('pushed');
-}
-
-try {
-  commitChanges();
-  console.log('Done');
-} catch (error) {
-  throw new Error(error);
 }
