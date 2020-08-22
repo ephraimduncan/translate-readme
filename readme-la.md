@@ -4,7 +4,7 @@
 
 Factum est autem GitHub qui transferendum in readme in repo sponte ad certa lingua.
 
-_A ad submission[NSW: GitHub actiones pro patefacio radix!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn) hackathon_
+_A ad submission[NSW: GitHub actiones pro patefacio radix!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)hackathon_
 
 ## setup
 
@@ -32,6 +32,8 @@ _A ad submission[NSW: GitHub actiones pro patefacio radix!](https://dev.to/devte
             uses: dephraiim/translate-readme@v1
             with:
               LANG: la
+              # ISO Langusge Code.
+              # Supported Languages below
     ```
 
 ## configurationis
