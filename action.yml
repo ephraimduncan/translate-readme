@@ -1,6 +1,11 @@
 name: Translate Readme Action
 author: Ephraim Atta-Duncan
 description: Translate the Readme to another language
+inputs:
+  LANG:
+    description: The Language you want to translate to.
+    default: zh-CN
+    required: false
 
 runs:
   using: node12
