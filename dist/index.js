@@ -25686,10 +25686,10 @@ langs.forEach((lang) => {
       toMarkdown(readmeAST),
       'utf8'
     );
+    console.log(`${lang} readme written`);
   }
 
   writeToFile();
-  console.log(`${lang} written`);
 });
 
 async function commitChanges() {
