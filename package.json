@@ -15,7 +15,7 @@
   "author": "Ephraim Atta-Duncan",
   "license": "ISC",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
     "http-proxy-agent": "^4.0.1",
     "remark-parse": "^8.0.3",
