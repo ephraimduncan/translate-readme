@@ -2,7 +2,7 @@
 
 **Factum est autem lingua interpretari GitHub Readme**
 
-Factum est autem GitHub qui transferendum in readme in repo sponte ad certa lingua.
+This is a GitHub Action that automatically translate the readme in your repo to a specified language.
 
 _A ad submission[NSW: GitHub actiones pro patefacio radix!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)hackathon_
 
