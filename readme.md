@@ -29,13 +29,13 @@ _A submission for the [DEV: GitHub Actions For Open Source!](https://dev.to/devt
            with:
              node-version: 12.x
          - name: Adding Readme - Latin
-           uses: benjaminchodroff/translate-readme@v2
+           uses: dephraiim/translate-readme@main
            with:
              LANG: la
              # ISO Langusge Code.
              # Supported Languages below
         - name: Adding Readme - English
-          uses: benjaminchodroff/translate-readme@v2
+          uses: dephraiim/translate-readme@main
           with:
             LANG: en
    ```
