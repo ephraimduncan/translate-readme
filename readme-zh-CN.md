@@ -2,7 +2,12 @@
 
 ## 自述翻译
 
-[英语](README.md)[简体中文](README.zh-CN.md)[繁体中文](README.zh-TW.md)[印地语](README.hi.md)[法文](README.fr.md)[阿拉伯](README.ar.md)
+-   [英语](README.md)
+-   [简体中文](README.zh-CN.md)
+-   [繁体中文](README.zh-TW.md)
+-   [印地语](README.hi.md)
+-   [法文](README.fr.md)
+-   [阿拉伯](README.ar.md)
 
 **GitHub Action将自述文件翻译成任何语言**
 
@@ -14,7 +19,7 @@ _提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the
 
 1.  **添加工作流程文件**到您的项目中（例如`.github/workflows/readme.yml`):
 
-    ```yml
+
     name: Translate README
 
     on:
@@ -31,28 +36,27 @@ _提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the
             uses: actions/setup-node@v1
             with:
               node-version: 12.x
+          # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
           - name: Adding README - Chinese Simplified
             uses: dephraiim/translate-readme@main
             with:
               LANG: zh-CN
-              # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages
-         - name: Adding README - Chinese Traditional
-           uses: dephraiim/translate-readme@main
-           with:
-             LANG: zh-TW
-         - name: Adding README - Hindi
-           uses: dephraiim/translate-readme@main
-           with:
-             LANG: hi
-         - name: Adding README - Arabic
-           uses: dephraiim/translate-readme@main
-           with:
-             LANG: ar
-         - name: Adding README - French
-           uses: dephraiim/translate-readme@main
-           with:
-             LANG: fr
-    ```
+          - name: Adding README - Chinese Traditional
+            uses: dephraiim/translate-readme@main
+            with:
+              LANG: zh-TW
+          - name: Adding README - Hindi
+            uses: dephraiim/translate-readme@main
+            with:
+              LANG: hi
+          - name: Adding README - Arabic
+            uses: dephraiim/translate-readme@main
+            with:
+              LANG: ar
+          - name: Adding README - French
+            uses: dephraiim/translate-readme@main
+            with:
+              LANG: fr
 
 ## 组态
 
