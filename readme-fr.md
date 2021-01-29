@@ -2,11 +2,16 @@
 
 ## Traduction README
 
-[Anglais](README.md)[Chinois simplifié](README.zh-CN.md)[繁体中文](README.zh-TW.md)[hindi](README.hi.md)[Française](README.fr.md)[عربى](README.ar.md)
+-   [Anglais](README.md)
+-   [Chinois simplifié](README.zh-CN.md)
+-   [chinois traditionnel](README.zh-TW.md)
+-   [hindi](README.hi.md)
+-   [Française](README.fr.md)
+-   [arabe](README.ar.md)
 
 **Action GitHub pour traduire Readme dans n'importe quelle langue**
 
-This is a GitHub Action that automatically translate the readme in your repo to a specified language.
+Il s'agit d'une action GitHub qui traduit automatiquement le fichier readme de votre dépôt dans une langue spécifiée.
 
 _Une soumission pour le[DEV: Actions GitHub pour Open Source!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)hackathon_
 
@@ -14,7 +19,7 @@ _Une soumission pour le[DEV: Actions GitHub pour Open Source!](https://dev.to/de
 
 1.  **Ajouter un fichier de workflow**à votre projet (par ex.`.github/workflows/readme.yml`):
 
-    ```yml
+
     name: Translate README
 
     on:
@@ -31,28 +36,27 @@ _Une soumission pour le[DEV: Actions GitHub pour Open Source!](https://dev.to/de
             uses: actions/setup-node@v1
             with:
               node-version: 12.x
+          # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
           - name: Adding README - Chinese Simplified
             uses: dephraiim/translate-readme@main
             with:
               LANG: zh-CN
-              # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages
-         - name: Adding README - Chinese Traditional
-           uses: dephraiim/translate-readme@main
-           with:
-             LANG: zh-TW
-         - name: Adding README - Hindi
-           uses: dephraiim/translate-readme@main
-           with:
-             LANG: hi
-         - name: Adding README - Arabic
-           uses: dephraiim/translate-readme@main
-           with:
-             LANG: ar
-         - name: Adding README - French
-           uses: dephraiim/translate-readme@main
-           with:
-             LANG: fr
-    ```
+          - name: Adding README - Chinese Traditional
+            uses: dephraiim/translate-readme@main
+            with:
+              LANG: zh-TW
+          - name: Adding README - Hindi
+            uses: dephraiim/translate-readme@main
+            with:
+              LANG: hi
+          - name: Adding README - Arabic
+            uses: dephraiim/translate-readme@main
+            with:
+              LANG: ar
+          - name: Adding README - French
+            uses: dephraiim/translate-readme@main
+            with:
+              LANG: fr
 
 ## Configuration
 
@@ -69,7 +73,7 @@ Les langues prises en charge peuvent être trouvées ici<https://cloud.google.co
 
 ### Problèmes
 
-Vérifier[Ici](https://github.com/dephraiim/translate-readme/issues/1)pour les problèmes liés à cette action.
+Vérifier[ici](https://github.com/dephraiim/translate-readme/issues/1)pour les problèmes liés à cette action.
 
 ### Développement
 
@@ -77,4 +81,4 @@ Les suggestions et contributions sont toujours les bienvenues!
 
 ### LICENCE
 
-[MIT](./LICENSE)
+[AVEC](./LICENSE)
