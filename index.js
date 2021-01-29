@@ -42,11 +42,11 @@ const translatedText = originalText.map(async (text) => {
 async function writeToFile() {
   await Promise.all(translatedText);
   writeFileSync(
-    join(mainDir, `readme-${lang}.md`),
+    join(mainDir, `README.${lang}.md`),
     toMarkdown(readmeAST),
     "utf8"
   );
-  console.log(`${lang} readme written`);
+  console.log(`README.${lang}.md written`);
 }
 
 async function commitChanges(lang) {
@@ -58,7 +58,7 @@ async function commitChanges(lang) {
     "41898282+github-actions[bot]@users.noreply.github.com"
   );
   await git.commit(
-    `docs: Added "${lang}" readme translation via https://github.com/dephraiim/translate-readme`
+    `docs: Added README."${lang}".md translation via https://github.com/benjaminchodroff/translate-readme`
   );
   console.log("finished commit");
   await git.push();

@@ -28,12 +28,16 @@ _A submission for the [DEV: GitHub Actions For Open Source!](https://dev.to/devt
            uses: actions/setup-node@v1
            with:
              node-version: 12.x
-         - name: Adding License
-           uses: dephraiim/translate-readme@v1
+         - name: Adding Readme - Latin
+           uses: benjaminchodroff/translate-readme@v2
            with:
              LANG: la
              # ISO Langusge Code.
              # Supported Languages below
+        - name: Adding Readme - English
+          uses: benjaminchodroff/translate-readme@v2
+          with:
+            LANG: en
    ```
 
 ## Configuration
