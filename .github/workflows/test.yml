@@ -20,11 +20,11 @@ jobs:
         with:
           node-version: '12.x'
       - name: Translate Readme - Latin
-        uses: benjaminchodroff/translate-readme@main
+        uses: dephraiim/translate-readme@main
         with:
           LANG: la
       - name: Translate Readme - Chinese (Simplified)
-        uses: benjaminchodroff/translate-readme@main
+        uses: dephraiim/translate-readme@main
         with:
           LANG: zh-CN
 
