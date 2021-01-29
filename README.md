@@ -1,5 +1,13 @@
 # Translate Readme Action
 
+## README Translation
+[English](README.md)
+[简体中文](README.zh-CN.md)
+[繁体中文](README.zh-TW.md)
+[हिंदी](README.hi.md)
+[Française](README.fr.md)
+[عربى](README.ar.md)
+
 **GitHub Action to translate Readme to any language**
 
 This is a GitHub Action that automatically translate the readme in your repo to a specified language.
@@ -11,14 +19,13 @@ _A submission for the [DEV: GitHub Actions For Open Source!](https://dev.to/devt
 1. **Add a workflow file** to your project (e.g. `.github/workflows/readme.yml`):
 
    ```yml
-   name: Translate Readme
+   name: Translate README
 
    on:
      push:
        branches:
          - main
          - master
-
    jobs:
      build:
        runs-on: ubuntu-latest
@@ -28,16 +35,27 @@ _A submission for the [DEV: GitHub Actions For Open Source!](https://dev.to/devt
            uses: actions/setup-node@v1
            with:
              node-version: 12.x
-         - name: Adding Readme - Latin
+         - name: Adding README - Chinese Simplified
            uses: dephraiim/translate-readme@main
            with:
-             LANG: la
-             # ISO Langusge Code.
-             # Supported Languages below
-        - name: Adding Readme - English
+             LANG: zh-CN
+             # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages
+        - name: Adding README - Chinese Traditional
           uses: dephraiim/translate-readme@main
           with:
-            LANG: en
+            LANG: zh-TW
+        - name: Adding README - Hindi
+          uses: dephraiim/translate-readme@main
+          with:
+            LANG: hi
+        - name: Adding README - Arabic
+          uses: dephraiim/translate-readme@main
+          with:
+            LANG: ar
+        - name: Adding README - French
+          uses: dephraiim/translate-readme@main
+          with:
+            LANG: fr
    ```
 
 ## Configuration
