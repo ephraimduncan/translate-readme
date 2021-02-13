@@ -1,23 +1,23 @@
-# 翻译自述动作
+# 翻譯自述動作
 
-## 自述翻译
+## 自述翻譯
 
--   [英语](README.md)
--   [简体中文](README.zh-CN.md)
--   [繁体中文](README.zh-TW.md)
--   [印地语](README.hi.md)
+-   [英語](README.md)
+-   [簡體中文](README.zh-CN.md)
+-   [繁體中文](README.zh-TW.md)
+-   [印地語](README.hi.md)
 -   [法文](README.fr.md)
 -   [阿拉伯](README.ar.md)
 
-**GitHub Action将自述文件翻译成任何语言**
+**GitHub Action將自述文件翻譯成任何語言**
 
-这是一个GitHub Action，可自动将您回购中的自述文件翻译成指定的语言。
+這是一個GitHub Action，可自動將您回購中的自述文件翻譯成指定的語言。
 
-_提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客马拉松_
+_提交的[DEV：開源的GitHub行動！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
 
-## 设定
+## 設定
 
-1.  **添加工作流程文件**到您的项目中（例如`.github/workflows/readme.yml`):
+1.  **添加工作流程文件**到您的項目中（例如`.github/workflows/readme.yml`):
 
 
     name: Translate README
@@ -58,27 +58,27 @@ _提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the
             with:
               LANG: fr
 
-## 组态
+## 組態
 
-### 选件
+### 選件
 
-您可以使用以下选项进一步配置操作：
+您可以使用以下選項進一步配置操作：
 
--   `LANG`：您要将自述文件翻译成的语言。默认为简体中文。 （我是加纳人）可以在下面找到支持的语言。
-    （默认：`zh-CH`）（必填：`false`)
+-   `LANG`：您要將自述文件翻譯成的語言。默認為簡體中文。 （我是加納人）可以在下面找到支持的語言。
+    （默認：`zh-CH`）（必填：`false`)
 
-## 支持的语言
+## 支持的語言
 
-支持的语言可以在这里找到[HTTPS://cloud.Google.com/translate/docs/languages](https://cloud.google.com/translate/docs/languages)
+支持的語言可以在這裡找到<https://cloud.google.com/translate/docs/languages>
 
-### 问题
+### 問題
 
-检查一下[这里](https://github.com/dephraiim/translate-readme/issues/1)有关与此操作有关的问题。
+檢查一下[這裡](https://github.com/dephraiim/translate-readme/issues/1)有關與此操作有關的問題。
 
-### 发展历程
+### 發展歷程
 
-随时欢迎提出建议和贡献！
+隨時歡迎提出建議和貢獻！
 
-### 执照
+### 執照
 
-[与](./LICENSE)
+[與](./LICENSE)
