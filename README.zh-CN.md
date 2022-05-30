@@ -1,6 +1,6 @@
-# 翻译自述动作
+# 翻译自述文件操作
 
-## 自述翻译
+## 自述文件翻译
 
 -   [英语](README.md)
 -   [简体中文](README.zh-CN.md)
@@ -9,15 +9,15 @@
 -   [法语](README.fr.md)
 -   [阿拉伯](README.ar.md)
 
-**GitHub Action将自述文件翻译成任何语言**
+**将自述文件翻译成任何语言的 GitHub Action**
 
-This is a GitHub Action that automatically translate the readme in your repo to a specified language.
+这是一个 GitHub 操作，可自动将您的存储库中的自述文件翻译成指定的语言。
 
-_提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客马拉松_
+_提交给[DEV：开源的 GitHub Actions！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客马拉松_
 
-## Setup
+## 设置
 
-1.  **添加工作流程文件** to your project (e.g. `.github/workflows/readme.yml`):
+1.  **添加工作流文件** to your project (e.g. `.github/workflows/readme.yml`):
 
 
     name: Translate README
@@ -60,7 +60,7 @@ _提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the
 
 ## 配置
 
-### 选件
+### 选项
 
 您可以使用以下选项进一步配置操作：
 
@@ -69,15 +69,15 @@ _提交的[DEV：开源的GitHub行动！](https://dev.to/devteam/announcing-the
 
 ## 支持的语言
 
-支持的语言可以在这里找到[HTTPS://cloud.Google.com/translate/docs/languages](https://cloud.google.com/translate/docs/languages)
+可以在这里找到支持的语言[HTTPS://cloud.Google.com/translate/docs/languages](https://cloud.google.com/translate/docs/languages)
 
 ### 问题
 
-查看[这里](https://github.com/dephraiim/translate-readme/issues/1)有关与此操作有关的问题。
+查看[这里](https://github.com/dephraiim/translate-readme/issues/1)对于与此操作相关的问题。
 
 ### 发展
 
-随时欢迎提出建议和贡献！
+欢迎提出建议和贡献！
 
 ### 执照
 
