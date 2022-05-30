@@ -2,7 +2,7 @@
 
 ## README الترجمة
 
--   [الإنجليزية](README.md)
+-   [إنجليزي](README.md)
 -   [الصينية المبسطة](README.zh-CN.md)
 -   [الصينية التقليدية](README.zh-TW.md)
 -   [هندي](README.hi.md)
@@ -13,11 +13,11 @@
 
 هذا إجراء GitHub يقوم تلقائيًا بترجمة الملف التمهيدي في الريبو الخاص بك إلى لغة محددة.
 
-_تقديم ل[DEV: إجراءات جيثب مفتوحة المصدر!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn) hackathon_
+_تقديم ل[DEV: إجراءات جيثب للمصدر المفتوح!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)هاكاثون_
 
-## يثبت
+## اقامة
 
-1.  **أضف ملف سير عمل** to your project (e.g. `.github/workflows/readme.yml`):
+1.  **أضف ملف سير عمل**لمشروعك (على سبيل المثال`.github/workflows/readme.yml`):
 
 
     name: Translate README
@@ -58,9 +58,9 @@ _تقديم ل[DEV: إجراءات جيثب مفتوحة المصدر!](https://
             with:
               LANG: fr
 
-## إعدادات
+## ترتيب
 
-### Options
+### خيارات
 
 يمكنك تكوين الإجراء بشكل أكبر باستخدام الخيارات التالية:
 
@@ -69,15 +69,15 @@ _تقديم ل[DEV: إجراءات جيثب مفتوحة المصدر!](https://
 
 ## اللغات المعتمدة
 
-يمكن العثور على اللغات المدعومة هنا[هتبص://كلود.جوجل.كوم/ترانسلت/دكس/لانججص](https://cloud.google.com/translate/docs/languages)
+يمكن العثور على اللغات المدعومة هنا[هتبس://كلود.جوجل.كوم/ترانسلت/دكس/لانججس](https://cloud.google.com/translate/docs/languages)
 
 ### مشاكل
 
-الشيك[هنا](https://github.com/dephraiim/translate-readme/issues/1)للقضايا المتعلقة بهذا الإجراء.
+يفحص[هنا](https://github.com/dephraiim/translate-readme/issues/1)للقضايا المتعلقة بهذا الإجراء.
 
 ### تطوير
 
-Suggestions and contributions are always welcome!
+الاقتراحات والمساهمات هي دائما موضع ترحيب!
 
 ### رخصة
 
