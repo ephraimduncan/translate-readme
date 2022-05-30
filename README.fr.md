@@ -1,6 +1,6 @@
-# Traduire l'action Readme
+# Traduire l'action Lisez-moi
 
-## README Translation
+## Traduction LISEZMOI
 
 -   [Anglais](README.md)
 -   [Chinois simplifié](README.zh-CN.md)
@@ -9,15 +9,15 @@
 -   [Française](README.fr.md)
 -   [arabe](README.ar.md)
 
-**Action GitHub pour traduire Readme dans n'importe quelle langue**
+**GitHub Action pour traduire Readme dans n'importe quelle langue**
 
-Il s'agit d'une action GitHub qui traduit automatiquement le fichier readme de votre dépôt dans une langue spécifiée.
+Il s'agit d'une action GitHub qui traduit automatiquement le fichier readme de votre référentiel dans une langue spécifiée.
 
-_Une soumission pour le[DEV: Actions GitHub pour Open Source!](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)hackathon_
+_Une soumission pour le[DEV : Actions GitHub pour l'Open Source !](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)hackathon_
 
 ## Installer
 
-1.  **Ajouter un fichier de workflow**à votre projet (par ex.`.github/workflows/readme.yml`):
+1.  **Ajouter un fichier de flux de travail**à votre projet (ex.`.github/workflows/readme.yml`):
 
 
     name: Translate README
@@ -60,24 +60,24 @@ _Une soumission pour le[DEV: Actions GitHub pour Open Source!](https://dev.to/de
 
 ## Configuration
 
-### Options
+### Choix
 
-Vous pouvez configurer davantage l'action avec les options suivantes:
+Vous pouvez configurer davantage l'action avec les options suivantes :
 
--   `LANG`: La langue dans laquelle vous souhaitez traduire votre fichier Lisez-moi. La valeur par défaut est le chinois simplifié. (Je suis ghanéen) Les langues prises en charge se trouvent ci-dessous.
-    (défaut:`zh-CH`) (obligatoire:`false`)
+-   `LANG`: La langue dans laquelle vous souhaitez traduire votre fichier readme. La valeur par défaut est le chinois simplifié. (Je suis un Ghanéen) Les langues prises en charge peuvent être trouvées ci-dessous.
+    (défaut:`zh-CH`) (requis:`false`)
 
 ## Langues prises en charge
 
 Les langues prises en charge peuvent être trouvées ici<https://cloud.google.com/translate/docs/languages>
 
-### Questions
+### Problèmes
 
 Vérifier[ici](https://github.com/dephraiim/translate-readme/issues/1)pour les problèmes liés à cette action.
 
 ### Développement
 
-Les suggestions et contributions sont toujours les bienvenues!
+Les suggestions et contributions sont toujours les bienvenues !
 
 ### LICENCE
 
