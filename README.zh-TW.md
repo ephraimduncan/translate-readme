@@ -1,23 +1,23 @@
-# 翻譯自述動作
+# 翻譯自述文件操作
 
-## 自述翻譯
+## 自述文件翻譯
 
 -   [英語](README.md)
 -   [簡體中文](README.zh-CN.md)
 -   [繁體中文](README.zh-TW.md)
 -   [印地語](README.hi.md)
--   [Française](README.fr.md)
+-   [法語](README.fr.md)
 -   [阿拉伯](README.ar.md)
 
-**GitHub Action將自述文件翻譯成任何語言**
+**GitHub Action 將自述文件翻譯成任何語言**
 
-這是一個GitHub Action，可自動將您回購中的自述文件翻譯成指定的語言。
+這是一個 GitHub 操作，可自動將您的存儲庫中的自述文件翻譯成指定的語言。
 
-_提交的[DEV：開源的GitHub行動！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
+_提交給[DEV：開源的 GitHub Actions！](https://dev.to/devteam/announcing-the-github-actions-hackathon-on-dev-3ljn)黑客馬拉松_
 
 ## 設置
 
-1.  **添加工作流程文件**到您的項目中（例如`.github/workflows/readme.yml`):
+1.  **添加工作流文件**到您的項目（例如`.github/workflows/readme.yml`):
 
 
     name: Translate README
@@ -64,20 +64,20 @@ _提交的[DEV：開源的GitHub行動！](https://dev.to/devteam/announcing-the
 
 您可以使用以下選項進一步配置操作：
 
--   `LANG`: The language you want to translate your readme to. The default is Simplified Chinese. (I'm a Ghanaian) The supported languages can be found below.
-    (default: `zh-CH`） （必需的：`false`)
+-   `LANG`：您要將自述文件翻譯成的語言。默認為簡體中文。 （我是加納人）可以在下面找到支持的語言。
+    （默認：`zh-CH`） （必需的：`false`)
 
 ## 支持的語言
 
-支持的語言可以在這裡找到[HTTPS://cloud.Google.com/translate/docs/languages](https://cloud.google.com/translate/docs/languages)
+可以在這裡找到支持的語言<https://cloud.google.com/translate/docs/languages>
 
 ### 問題
 
-查看[這裡](https://github.com/dephraiim/translate-readme/issues/1)有關與此操作有關的問題。
+查看[這裡](https://github.com/dephraiim/translate-readme/issues/1)對於與此操作相關的問題。
 
 ### 發展
 
-隨時歡迎提出建議和貢獻！
+歡迎提出建議和貢獻！
 
 ### 執照
 
