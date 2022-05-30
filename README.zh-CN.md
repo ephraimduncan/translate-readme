@@ -17,7 +17,7 @@ _提交给[DEV：开源的 GitHub Actions！](https://dev.to/devteam/announcing-
 
 ## 设置
 
-1.  **添加工作流文件** to your project (e.g. `.github/workflows/readme.yml`):
+1.  **添加工作流文件**到您的项目（例如`.github/workflows/readme.yml`):
 
 
     name: Translate README
@@ -64,12 +64,12 @@ _提交给[DEV：开源的 GitHub Actions！](https://dev.to/devteam/announcing-
 
 您可以使用以下选项进一步配置操作：
 
--   `LANG`：您要将自述文件翻译成的语言。默认为简体中文。 （我是加纳人）可以在下面找到支持的语言。
-    （默认：`zh-CH`） （必需的：`false`)
+-   `LANG`: The language you want to translate your readme to. The default is Simplified Chinese. (I'm a Ghanaian) The supported languages can be found below.
+    (default: `zh-CH`） （必需的：`false`)
 
-## 支持的语言
+## Supported Languages
 
-可以在这里找到支持的语言[HTTPS://cloud.Google.com/translate/docs/languages](https://cloud.google.com/translate/docs/languages)
+可以在这里找到支持的语言<https://cloud.google.com/translate/docs/languages>
 
 ### 问题
 
