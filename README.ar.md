@@ -65,8 +65,8 @@ jobs:
 
 يمكنك تكوين الإجراء بشكل أكبر باستخدام الخيارات التالية:
 
--   `LANG`: اللغة التي تريد ترجمة الملف التمهيدي إليها. الافتراضي هو الصينية المبسطة. (أنا غاني) يمكن العثور على اللغات المدعومة أدناه.
-    (إفتراضي:`zh-CH`) (مطلوب:`false`)
+-   `LANG`: The language you want to translate your readme to. The default is Simplified Chinese. (I'm a Ghanaian) The supported languages can be found below.
+    (default: `zh-CH`) (مطلوب:`false`)
 
 ## اللغات المعتمدة
 
@@ -78,7 +78,7 @@ jobs:
 
 ### تطوير
 
-Suggestions and contributions are always welcome!
+الاقتراحات والمساهمات مرحب بها دائمًا!
 
 ### رخصة
 
