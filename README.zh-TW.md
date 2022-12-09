@@ -68,7 +68,7 @@ jobs:
 -   `LANG`：您要將自述文件翻譯成的語言。默認為簡體中文。 （我是加納人）可在下方找到支持的語言。
     （默認：`zh-CH`） （必需的：`false`)
 
-## Supported Languages
+## 支持的語言
 
 可在此處找到支持的語言<https://cloud.google.com/translate/docs/languages>
 
