@@ -19,44 +19,45 @@ _تقديم ل[DEV: إجراءات جيثب للمصدر المفتوح!](https:
 
 1.  **أضف ملف سير عمل**لمشروعك (على سبيل المثال`.github/workflows/readme.yml`):
 
+```yaml
+name: Translate README
 
-    name: Translate README
-
-    on:
-      push:
-        branches:
-          - main
-          - master
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - name: Setup Node.js
-            uses: actions/setup-node@v1
-            with:
-              node-version: 12.x
-          # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
-          - name: Adding README - Chinese Simplified
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: zh-CN
-          - name: Adding README - Chinese Traditional
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: zh-TW
-          - name: Adding README - Hindi
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: hi
-          - name: Adding README - Arabic
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: ar
-          - name: Adding README - French
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: fr
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
+      - name: Adding README - Chinese Simplified
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: zh-CN
+      - name: Adding README - Chinese Traditional
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: zh-TW
+      - name: Adding README - Hindi
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: hi
+      - name: Adding README - Arabic
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: ar
+      - name: Adding README - French
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: fr
+```
 
 ## ترتيب
 
@@ -77,7 +78,7 @@ _تقديم ل[DEV: إجراءات جيثب للمصدر المفتوح!](https:
 
 ### تطوير
 
-الاقتراحات والمساهمات هي دائما موضع ترحيب!
+Suggestions and contributions are always welcome!
 
 ### رخصة
 
