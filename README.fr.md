@@ -19,50 +19,51 @@ _Une soumission pour le[DEV : Actions GitHub pour l'Open Source !](https://de
 
 1.  **Ajouter un fichier de flux de travail**à votre projet (ex.`.github/workflows/readme.yml`):
 
+```yaml
+name: Translate README
 
-    name: Translate README
-
-    on:
-      push:
-        branches:
-          - main
-          - master
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - name: Setup Node.js
-            uses: actions/setup-node@v1
-            with:
-              node-version: 12.x
-          # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
-          - name: Adding README - Chinese Simplified
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: zh-CN
-          - name: Adding README - Chinese Traditional
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: zh-TW
-          - name: Adding README - Hindi
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: hi
-          - name: Adding README - Arabic
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: ar
-          - name: Adding README - French
-            uses: dephraiim/translate-readme@main
-            with:
-              LANG: fr
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      # ISO Langusge Codes: https://cloud.google.com/translate/docs/languages  
+      - name: Adding README - Chinese Simplified
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: zh-CN
+      - name: Adding README - Chinese Traditional
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: zh-TW
+      - name: Adding README - Hindi
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: hi
+      - name: Adding README - Arabic
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: ar
+      - name: Adding README - French
+        uses: dephraiim/translate-readme@main
+        with:
+          LANG: fr
+```
 
 ## Configuration
 
 ### Choix
 
-Vous pouvez configurer davantage l'action avec les options suivantes :
+You can configure the action further with the following options:
 
 -   `LANG`: La langue dans laquelle vous souhaitez traduire votre fichier readme. La valeur par défaut est le chinois simplifié. (Je suis un Ghanéen) Les langues prises en charge peuvent être trouvées ci-dessous.
     (défaut:`zh-CH`) (requis:`false`)
