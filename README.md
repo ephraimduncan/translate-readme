@@ -17,7 +17,7 @@ _A submission for the [DEV: GitHub Actions For Open Source!](https://dev.to/devt
 ## Setup
 
 1. **Add a workflow file** to your project (e.g. `.github/workflows/readme.yml`):
-```
+```yaml
 name: Translate README
 
 on:
