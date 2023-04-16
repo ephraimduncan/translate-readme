@@ -9918,8 +9918,7 @@ async function translate(text, options) {
                 `${baseUrl}?${querystring.stringify(data)}`,
                 {
                     method: "POST",
-                    form: true,
-                    body: {
+                    form: {
                         q: text
                     }
                 }
